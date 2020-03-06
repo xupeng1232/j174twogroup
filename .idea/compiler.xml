@@ -16,7 +16,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="chenglongfei" target="1.7" />
-      <module name="hehang" target="1.7" />
+      <module name="hehang" target="1.8" />
       <module name="wanghejun" target="1.7" />
       <module name="xupeng" target="1.7" />
       <module name="yuanzhihao" target="1.7" />
