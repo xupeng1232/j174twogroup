@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Qin lei's project/Qin lei's project.iml" filepath="$PROJECT_DIR$/Qin lei's project/Qin lei's project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chenglongfei/chenglongfei.iml" filepath="$PROJECT_DIR$/chenglongfei/chenglongfei.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hehang/hehang.iml" filepath="$PROJECT_DIR$/hehang/hehang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wanghejun/wanghejun.iml" filepath="$PROJECT_DIR$/wanghejun/wanghejun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xupeng/xupeng.iml" filepath="$PROJECT_DIR$/xupeng/xupeng.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuanzhihao/yuanzhihao.iml" filepath="$PROJECT_DIR$/yuanzhihao/yuanzhihao.iml" />
     </modules>
   </component>
 </project>

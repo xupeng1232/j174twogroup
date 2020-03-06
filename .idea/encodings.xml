@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" addBOMForNewFiles="with NO BOM" />
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/chenglongfei" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hehang" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/qinglei" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wanghejun" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wanghejun" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xupeng" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yuanzhihao" charset="UTF-8" />
+  </component>
 </project>

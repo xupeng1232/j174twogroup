@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>project</groupId>
-  <artifactId>Qin lei's project</artifactId>
+  <artifactId>qinglei</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>Qin lei's project Maven Webapp</name>
+  <name>qinglei Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 

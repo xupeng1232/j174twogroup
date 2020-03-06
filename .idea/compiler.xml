@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="chenglongfei" />
+        <module name="hehang" />
+        <module name="qinglei" />
+        <module name="wanghejun" />
+        <module name="xupeng" />
+        <module name="yuanzhihao" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="chenglongfei" target="1.7" />
+      <module name="hehang" target="1.7" />
+      <module name="wanghejun" target="1.7" />
+      <module name="xupeng" target="1.7" />
+      <module name="yuanzhihao" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
