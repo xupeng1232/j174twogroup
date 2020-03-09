@@ -19,9 +19,10 @@ public class StudentTest {
     @Test
     public void testAdd(){
 //        service.add(new StudentBean("nh","1615651"));
-//        service.findAll();
+        //service.findAll();
 //        System.out.println("aaa");
 //        service.delStu(10);
 //        service.updateStud(1,"156","156");
+//        service.findName("188");
     }
 }

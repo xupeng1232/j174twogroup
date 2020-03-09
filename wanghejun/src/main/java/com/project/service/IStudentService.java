@@ -6,11 +6,8 @@ import java.util.List;
 
 public interface IStudentService {
 
-     void add(StudentBean student);
+    List<StudentBean> findAll();
 
-     List<StudentBean> findAll();
+    StudentBean findName(String name);
 
-     void delStu(int id);
-
-     void updateStud(int id,String name,String phone);
 }

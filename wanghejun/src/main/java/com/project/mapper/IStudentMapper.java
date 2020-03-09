@@ -19,4 +19,7 @@ public interface IStudentMapper {
 
     @Update("update t_student set f_name=#{name},f_phone=#{phone} where pk_id=#{id}")
     void updateStud(int id, String name, String phone);
+
+    @Select("select * from t_student where f_name=#{name}")
+    StudentBean findName(String name);
 }
