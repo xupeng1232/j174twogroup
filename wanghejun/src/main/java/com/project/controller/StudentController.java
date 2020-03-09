@@ -4,6 +4,7 @@ import com.project.bean.StudentBean;
 import com.project.service.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,8 +17,7 @@ public class StudentController {
     private IStudentService service;
 
     @RequestMapping("/findName.test")
-    public StudentBean findName(HttpServletRequest request){
-        String name =request.getParameter("name");
+    public StudentBean findName(@RequestParam("name") String name){
         System.out.println(name);
         return service.findName(name);
     }
