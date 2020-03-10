@@ -1,6 +1,8 @@
 package com.project.service.impl;
 
 import com.project.bean.StudentBean;
+import com.project.bean.UserBean;
+import com.project.bean.UserInfoBean;
 import com.project.mapper.IStudentMapper;
 import com.project.service.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,16 @@ public class StudentServiceImpl implements IStudentService {
     @Override
     public StudentBean findName(String name) {
        return studentMapper.findName(name);
+    }
+
+    @Override
+    public void addUser(UserBean user) {
+        studentMapper.addUser(user);
+    }
+
+    @Override
+    public void addUserInfo(UserInfoBean userInfo) {
+        studentMapper.addUserInfo(userInfo);
     }
 
 

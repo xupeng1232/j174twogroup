@@ -1,6 +1,8 @@
 package test;
 
 import com.project.bean.StudentBean;
+import com.project.bean.UserBean;
+import com.project.bean.UserInfoBean;
 import com.project.service.IStudentService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,5 +26,7 @@ public class StudentTest {
 //        service.delStu(10);
 //        service.updateStud(1,"156","156");
 //        service.findName("188");
+//        service.addUser(new UserBean("nh","123324",23));
+//        service.addUserInfo(new UserInfoBean());
     }
 }
