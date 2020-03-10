@@ -1,16 +1,19 @@
 package com.project.service;
 
 import com.project.bean.StudentBean;
+import com.project.bean.UserBean;
+import com.project.bean.UserInfoBean;
 
 import java.util.List;
 
 public interface IStudentService {
 
-     void add(StudentBean student);
+    List<StudentBean> findAll();
 
-     List<StudentBean> findAll();
+    StudentBean findName(String name);
 
-     void delStu(int id);
+    void addUser(UserBean user);
 
-     void updateStud(int id,String name,String phone);
+    void addUserInfo(UserInfoBean userInfo);
+
 }
