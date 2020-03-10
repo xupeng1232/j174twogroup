@@ -13,7 +13,7 @@ public class T {
     private IStudentService service;
     @Test
     public void test(){
-//        System.out.println(service.findAll());
+        System.out.println(service.findAll());
 //        service.add(new StudentEntity("asdfd","32323"));
 //        service.update(1,"99999");
 //        service.del(8);
