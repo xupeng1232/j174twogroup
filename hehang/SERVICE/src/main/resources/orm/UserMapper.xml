@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.mapper.IUserMapper">
+
+  <resultMap type="userBean" id="userMap">
+      <id column="u_id" property="id"/>
+      <result column="u_name" property="name"/>
+      <result column="u_pass" property="pass"/>
+      <result column="u_age"  property="age"/>
+  </resultMap>
+
+
+    <select id="findAll" resultMap="userMap">
+        select * from t_user
+    </select>
+
+    <select id="findById" parameterType="int" resultMap="userMap">
+        select * from t_user where u_id = #{id}
+    </select>
+
+  
+</mapper>
