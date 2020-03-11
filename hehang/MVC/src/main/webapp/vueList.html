@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Vue集合</title>
-    <script src=" https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
-    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 </head>
 <body>
 
@@ -35,9 +36,7 @@
                this.$http.get("http://localhost:8080/MVC/list").then(function (result) {
                    var r = result.body;
                    alert(r);
-
-                   var json = JSON.parse(r)
-                   this.info = json;
+                   this.info = r;
                },function () {
                    console.log("错误")
                })

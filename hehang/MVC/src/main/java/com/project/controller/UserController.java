@@ -8,6 +8,9 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class UserController {
@@ -20,7 +23,10 @@ public class UserController {
 
 
     @RequestMapping("list")
-    public String mvc(){
+    @ResponseBody
+    public String mvc(HttpServletResponse resp){
+        resp.setContentType("text/html;charset=utf-8");
+
         //获得http客户端，对于浏览器是后端，对于后端服务器属于客户端
         HttpClient client = HttpClients.createDefault();
         //创建post请求
@@ -34,6 +40,7 @@ public class UserController {
             HttpEntity entity = response.getEntity();
             //返回实体中的字符
             String s = EntityUtils.toString(entity,"utf-8");
+            System.out.println(s);
             return s;
         } catch (Exception e) {
             e.printStackTrace();

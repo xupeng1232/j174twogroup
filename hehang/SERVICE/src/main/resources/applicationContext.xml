@@ -45,11 +45,7 @@
 	<bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="data"/>
 		<property name="typeAliasesPackage" value="com.project.bean"/>
-		<property name="mapperLocations">
-			<list>
-				<value>orm/*.xml</value>
-			</list>
-		</property>
+		<property name="mapperLocations" value="classpath:orm/*.xml"></property>
 	</bean>
 
 	<!--配置mapper-->

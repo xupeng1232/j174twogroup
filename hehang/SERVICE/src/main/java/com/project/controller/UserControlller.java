@@ -18,15 +18,15 @@ public class UserControlller {
     @RequestMapping("findAll")
     @ResponseBody
     public List<UserBean> findAll(){
+
         return service.findAll();
-        //return Arrays.asList(new UserBean("丽丽", "777", 20),new UserBean("kk", "55", 22));
     }
 
 
     @RequestMapping("one")
     @ResponseBody
     public UserBean one(){
-        //return new UserBean("丽丽", "777", 21);
+
         return service.findById(13);
     }
 }
