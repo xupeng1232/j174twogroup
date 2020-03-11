@@ -9,5 +9,7 @@ public interface IUserService {
 
     public void add(UserBean user);
 
-    public UserBean find(String name);
+
+    public UserBean getUserByName(String userName);
+
 }

@@ -13,5 +13,6 @@ public interface IUserMapper {
     @Insert("insert into t_user(f_name,f_pwd,f_age)values(#{name},#{pwd},#{age})")
     public void add(UserBean user);
 
-    public UserBean find(String name);
+
+    public UserBean getUserByName(String userName);
 }

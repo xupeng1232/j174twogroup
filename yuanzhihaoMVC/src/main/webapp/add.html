@@ -5,14 +5,50 @@
     <title>Title</title>
 </head>
 <body>
-<div align="center">
-    <form action="addUser.lovo" method="post">
-        <span>用户:</span><input type="text" name="name"/><p/>
-        <span>密码:</span><input type="password" name="pwd"/><p/>
-        <span>年龄:</span><input type="number" name="age"/><p/>
-        <input type="submit"/>
-    </form>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<!--AJAX-->
+<script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+
+    <div id="vid">
+        <span>用户:</span><input type="text" name="name" v-model="name"/><p/>
+        <span>密码:</span><input type="password" name="pwd" v-model="pwd"/><p/>
+        <span>年龄:</span><input type="number" name="age" v-model="age"/><p/>
+
+        <span style="font-size: 30px">{{name}}</span>
+        <span style="font-size: 30px">{{pwd}}</span>
+        <span style="font-size: 30px">{{age}}</span>
+
+        <button @click="addUser()">注册</button>
+        <!--<input type="button" value="注册" @click="addUser()"/>-->
+    </div>
+    <script>
+        new Vue({
+            el:"#vid",
+            data:{
+                name:"",
+                pwd:"",
+                age:""
+            },
+            methods:{
+                addUser:function () {
+                    console.log(this.name);
+                    console.log(this.pwd);
+                    console.log(this.age);
+
+                    axios.post('addUser.lovo'
+                    ,{name:this.name,pwd:this.pwd,age:this.age})
+                        .then(function (response) {
+                            alert("成功");
+                        })
+                        .catch(function (error) { // 请求失败处理
+                            console.log(error.status);
+                        });
+                }
+            },
+        });
+    </script>
 </div>
 </body>
 </html>

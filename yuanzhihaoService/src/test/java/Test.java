@@ -17,6 +17,7 @@ public class Test {
     public  void te(){
 //        System.out.println(service.findByName());
 //        service.add(new UserBean("add测试","123",1));
+        System.out.println(service.getUserByName("ww"));;
     }
 
 }

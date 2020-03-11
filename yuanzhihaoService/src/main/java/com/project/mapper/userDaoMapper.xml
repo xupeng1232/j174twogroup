@@ -14,8 +14,10 @@
         select * from t_user;
     </select>
 
-    <select id="find" resultType="userBean">
-        select * from t_user where f_name=#{param1};
+    <select id="getUserByName" resultMap="userMap">
+        select * from t_user where f_name = #{param1};
     </select>
+
+
 
 </mapper>
