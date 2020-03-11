@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <!--AJAX-->
+    <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+</head>
+<body>
+   <div id="vid">
+         {{info}}<br>
+       用户名：<input type="text" name="name" v-model="input1"><br>
+       密码：<input type="password" name="pwd" v-model="input2"><br>
+       年龄：<input type="number" name="age" v-model="input3"><br>
+       <input type="hidden" name="id" v-model="input4">
+       <input type="button" value="注册" @click="addUser()" /><br>
+   </div>
+    <div id="infoDiv"  style="display: none;">
+        完善用户信息<br>
+        职位：<input type="text" name="job" v-model="input5"><br>
+        工资：<input type="text" name="money" v-model="input6"><br>
+        <input type="button" value="提交" @click="addInfo()" /><br>
+    </div>
+
+
+   <script>
+    var userId;
+       new Vue({
+           el:"#vid",
+           data:{
+                info:"注册",
+               input1:"",
+               input2:"",
+               input3:"",
+               input4:""
+
+           },
+           methods:{
+               addUser:function () {
+                   //发送get请求
+                    var name=this.input1;
+                   var pwd=this.input2;
+                   var age=this.input3;
+                   this.$http.get('register.lovo',{params : {name:name,pwd:pwd,age:age}}).then(function(res){
+                        var id=res.body.split("\"")[1];
+                       this.input4=id;
+                       userId=id;
+                       document.getElementById("infoDiv").style.display="block";
+                       },function(res){
+
+                   });
+               }
+           }
+       });
+       new Vue({
+           el:"#infoDiv",
+           data:{
+               input5:"",
+               input6:""
+           },
+           methods:{
+               addInfo:function () {
+                   //发送get请求
+                   var job=this.input5;
+                   var money=this.input6;
+                   this.$http.get('addInfo.lovo',{params : {job:job,money:money,userId:userId}}).then(function(res){
+
+                   },function(res){
+
+                   });
+               }
+           }
+       });
+   </script>
+
+
+</body>
+</html>
