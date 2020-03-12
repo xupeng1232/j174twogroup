@@ -6,19 +6,60 @@
 </head>
 <body>
     <div id="vid">
-        {{info}}
+        <table border="1">
+            <tr>
+                <th>用户名</th>
+                <th>密码</th>
+                <th>年龄</th>
+                <th>操作</th>
+            </tr>
+            <tr v-for="u in info">
+                <td>{{u.name}}</td>
+                <td>{{u.pwd}}</td>
+                <td>{{u.age}}</td>
+                <td> <button  @click="userInfo(u.id)">查看详情</button> </td>
+            </tr>
+        </table>
     </div>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
     <script>
         new Vue({
             el:"#vid",
             data:{
-                info:"hello vue"
+                info:""
             },
-            methods:{
-                getUser:function () {
 
+
+                mounted :function() {
+                var self = this;
+                    axios
+                        .get('getUserList.lovo')
+                        .then(function (response) {
+                            self.info = JSON.parse(response.data);
+                            // this.info = eval(response.data)
+                            alert(response.data)
+                        })
+                        .catch(function (error) { // 请求失败处理
+                            console.log(error);
+                        });
+                    // //发送get请求
+                    // this.$http.get('getUserList.lovo').then(function(result){
+                    //     var r= result.body;
+                    //     //把json字符串转换为json对象
+                    //     var json_r=   JSON.parse(r);
+                    //     // alert(r);
+                    //     this.info = json_r;
+                    // },function(){
+                    //     console.log('请求失败处理');
+                    // });
+                },
+            methods:{
+                userInfo:function (id) {
+                    alert(id);
+                    //根据id用AJAX去后台查询
                 }
             }
         });

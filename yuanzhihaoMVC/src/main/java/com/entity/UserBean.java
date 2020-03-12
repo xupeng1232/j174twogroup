@@ -1,10 +1,19 @@
 package com.entity;
 
-public class UserEntity {
+public class UserBean {
     private int id;
     private String name;
     private String pwd;
     private int age;
+
+    public UserBean() {
+    }
+
+    public UserBean(String name, String pwd, int age) {
+        this.name = name;
+        this.pwd = pwd;
+        this.age = age;
+    }
 
     public int getId() {
         return id;
