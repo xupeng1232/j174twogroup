@@ -18,6 +18,7 @@
     <modules>
         <module>MVC</module>
         <module>SERVICE</module>
+        <module>Hibernate</module>
     </modules>
 
     <properties>
