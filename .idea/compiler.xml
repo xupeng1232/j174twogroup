@@ -11,15 +11,18 @@
         <module name="qinglei" />
         <module name="wanghejun" />
         <module name="xupeng" />
-        <module name="yuanzhihao" />
+        <module name="yuanzhihaoMVC" />
+        <module name="yuanzhihaoService" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="chenglongfei" target="1.7" />
       <module name="hehang" target="1.8" />
-      <module name="wanghejun" target="1.7" />
+      <module name="wanghejun" target="1.8" />
       <module name="xupeng" target="1.7" />
-      <module name="yuanzhihao" target="1.7" />
+      <module name="yuanzhihao" target="1.8" />
+      <module name="yzhSpringMVC" target="1.8" />
+      <module name="yzhSpringService" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

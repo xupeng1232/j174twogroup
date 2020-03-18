@@ -10,15 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>hehang</artifactId>
-    <packaging>pom</packaging>
+    <packaging>war</packaging>
 
     <name>hehang Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
-    <modules>
-        <module>MVC</module>
-        <module>SERVICE</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,24 +23,12 @@
     </properties>
 
     <dependencies>
-        <!-- Jackson -->
-        <!--jackson依赖        -->
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>2.9.5</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.9.5</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>2.9.5</version>
-        </dependency>
-
     </dependencies>
 
     <build>

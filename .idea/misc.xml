@@ -3,6 +3,11 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/qinglei" />
+    <file type="web" url="file://$PROJECT_DIR$/yuanzhihao/yzhSpringService" />
+    <file type="web" url="file://$PROJECT_DIR$/yuanzhihaoMVC" />
+    <file type="web" url="file://$PROJECT_DIR$/yuanzhihaoService" />
+    <file type="web" url="file://$PROJECT_DIR$/yzhSpringMVC" />
+    <file type="web" url="file://$PROJECT_DIR$/yzhSpringService" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -20,6 +25,9 @@
         <option value="$PROJECT_DIR$/wanghejun/pom.xml" />
         <option value="$PROJECT_DIR$/xupeng/pom.xml" />
         <option value="$PROJECT_DIR$/yuanzhihao/pom.xml" />
+        <option value="$PROJECT_DIR$/yuanzhihao/yzhSpringService/pom.xml" />
+        <option value="$PROJECT_DIR$/yzhSpringMVC/pom.xml" />
+        <option value="$PROJECT_DIR$/yzhSpringService/pom.xml" />
       </set>
     </option>
   </component>
