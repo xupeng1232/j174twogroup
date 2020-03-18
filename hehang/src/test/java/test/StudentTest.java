@@ -21,7 +21,8 @@ public class StudentTest {
         //service.add(new StudentBean("丽丽", "88"));
         //service.del(6);
         //service.update(6, "77");
-        System.out.println(service.findAll());
+        //System.out.println(service.findAll());
+        System.out.println("好66");
     }
 
 }
