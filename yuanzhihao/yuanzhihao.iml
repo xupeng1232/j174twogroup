@@ -28,7 +28,6 @@
     <orderEntry type="jdk" jdkName="1.8 (2)" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.2.2.RELEASE" level="project" />
-    <orderEntry type="module" module-name="j174Test" exported="" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.2.2.RELEASE" level="project" />
@@ -43,5 +42,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Maven: org.springframework:spring-test:5.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.4.3.Final" level="project" />
+    <orderEntry type="module" module-name="j174Test" exported="" />
   </component>
 </module>

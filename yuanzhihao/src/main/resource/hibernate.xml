@@ -22,11 +22,6 @@
         <!--显示hibernate执行的sql语句-->
         <property name="show_sql">true</property>
         <!--把我们的orm交给hibernate-->
-        <mapping class="com.project.entity.UserEntity"></mapping>
-        <mapping class="com.project.entity.RoleEntity"></mapping>
 
-
-        <mapping class="com.project.entity.TeacherEntity"></mapping>
-        <mapping class="com.project.entity.StudentEntity"></mapping>
     </session-factory>
 </hibernate-configuration>
