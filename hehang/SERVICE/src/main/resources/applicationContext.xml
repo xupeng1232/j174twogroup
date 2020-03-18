@@ -26,7 +26,7 @@
 	<!--配置数据源-->
 	<bean id="data" class="com.alibaba.druid.pool.DruidDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<property name="url" value="jdbc:mysql://localhost:3306/ttt?CharacterEncoding=utf-8"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/chendong?useUnicode=true&amp;characterEncoding=UTF-8"/>
 		<property name="username" value="root"/>
 		<property name="password" value="w123456"/>
 
@@ -59,8 +59,20 @@
 		<property name="dataSource" ref="data"/>
 	</bean>
 
-	<!--允许注解配置事务-->
-	<tx:annotation-driven transaction-manager="trans"/>
+	<!--方法一、允许注解配置事务-->
+	<!--<tx:annotation-driven transaction-manager="trans"/>-->
+
+	<!--方法二、直接配置事务-->
+	<tx:advice id="xxx" transaction-manager="trans">
+		<tx:attributes>
+			<tx:method name="*find" read-only="true"/>
+			<tx:method name="*" rollback-for="Exception" propagation="REQUIRED" isolation="READ_COMMITTED"/>
+		</tx:attributes>
+	</tx:advice>
+	
+	<aop:config>
+		<aop:advisor advice-ref="xxx" pointcut="execution(* com.project.service..*.*(..))"/>
+	</aop:config>
 
 	<!--扫包-->
 	<context:component-scan base-package="com.project.service,com.project.controller"/>
